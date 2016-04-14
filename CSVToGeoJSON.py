@@ -26,13 +26,16 @@ import read_key
 
 
 STARTTIME = time.time()
+LOGFILE = os.path.join(os.path.dirname(__file__),"logs",
+                       os.path.basename(__file__)+
+                       time.strftime('.%Y%m%d_%H%M%S.log', time.localtime(STARTTIME)))
 DATA_PARSE = parse_datatypes.ParseDatatype(number_NA=[''])
 
-if not os.path.exists("logs"):
-    os.mkdir("logs")
+if not os.path.exists(os.path.dirname(LOGFILE)):
+    os.makedirs(os.path.dirname(LOGFILE))
 
 logging.basicConfig(
-    filename=os.path.join("logs",__file__+time.strftime('.%Y%m%d_%H%M%S.log', time.localtime(STARTTIME))),
+    filename=LOGFILE,
     format='%(asctime)s|%(levelno)d|%(levelname)s|%(filename)s|%(lineno)d|%(message)s',
     level=logging.DEBUG
     )
@@ -265,8 +268,6 @@ def add_data(layer, args, kf):
             raw_record = dict(zip(header, row))
             (record, skipped_msg) = process_data_row(args, kf, raw_record, reader.line_num)
 
-            pprint.pprint(record)
-
             if record is not None:
                 feature = osgeo.ogr.Feature(layer_def)
 
@@ -283,7 +284,10 @@ def add_data(layer, args, kf):
 
 
 def main(argv=None):
+    print("Writing log to {lf}; consult that for more details if needed.".format(lf=LOGFILE))
     args = parse_args(argv)
+    logging.info("Initial arguments are {args}".format(args=repr(args)))
+
     if args.keyfile is None:
         raise ValueError("Must supply a --keyfile")
     if not os.path.exists(args.keyfile):
@@ -292,6 +296,8 @@ def main(argv=None):
         raise ValueError("Must supply a --datafile")
     if not os.path.exists(args.datafile):
         raise ValueError("The --datafile '{filename}' does not exist".format(filename=args.datafile))
+    if args.outext not in ['.shp', '.geojson', '.GeoJSON']:
+        raise ValueError("Output extension must be one of '.shp' or '.geojson'")
 
 
     # Do as much sanity checking as possible before making, and
@@ -308,5 +314,9 @@ def main(argv=None):
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        logging.exception(e)
+        raise
 

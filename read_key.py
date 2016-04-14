@@ -9,8 +9,8 @@
 # column B containing values. Keys for the header:
 # 
 #
-# source [required]
-#  The source of the data, as a filename or a http://URL.
+# source
+#  The source of the data, as a http://URL.
 #  
 # epsg_code [required]
 #   The EPSG code for the geographic projection the data uses. Data often
