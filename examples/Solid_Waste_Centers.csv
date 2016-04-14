@@ -1,0 +1,81 @@
+SWIS Number,Unit Number,Site Name,Operator,Location,Place Name,Enforcement Agency,Owner,Category,Activity,Regulated Status,Operational Status,SiteID,UnitID,Location 1
+41-AA-0010,1,3rd Ave LF/San Mateo Composting Site,City Of San Mateo Public Works,East Third Ave; Along The Sf Bay,San Mateo                               ,County of San Mateo                     ,City Of San Mateo Public Works,Disposal                           ,Solid Waste Landfill,Permitted                          ,Closed,4168,4222,"CA 94404
+(37.5708, -122.2766)"
+41-AA-0197,1,Bay Area Organic Green Waste T/S,Elmer Cano,766 Warrington Ave.,Redwood City                            ,County of San Mateo                     ,Darin Muneno,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Active                             ,11340,11936,"CA 94063
+(37.48122, -122.20591)"
+41-CR-0005,1,Bay Road,,2100 Bay Road,East Palo Alto                          ,County of San Mateo                     ,Palo Alto Boat Works                    ,Disposal                           ,Solid Waste Disposal Site          ,Pre-regulations                    ,Closed,4202,4257,"CA 94303
+(37.47619, -122.12255)"
+41-AA-0193,1,Bayview Greenwaste Transfer Station,Bayview Greenwaste Transfer Station,766 Warrington Ave.,Redwood City                            ,County of San Mateo                     ,Darin Muneno,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Closed,11070,11597,"CA 94063
+(37.48132, -122.20614)"
+41-AA-0166,1,Belmont Island Park Landfill,,"Belmont Island Pk,ne Of Marineworld Pkwy",Belmont                                 ,County of San Mateo                     ,City Of Belmont                         ,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4182,4236,"CA 94002
+(37.5311, -122.2714)"
+41-AA-0185,1,Blue Line MRF And TS,"Blue Line Transfer, Inc.                ",500 East Jamie Court,South San Francisco                     ,County of San Mateo                     ,"Blue Line Transfer, Inc.                ",Transfer/Processing                ,Large Volume Transfer/Proc Facility,Permitted                          ,Active                             ,4197,4251,"CA 94080
+(37.64905, -122.38252)"
+41-AA-0061,1,Brisbane Landfill,,245 Tunnel Rd.Between Bayshore Blvd & Hw,Brisbane                                ,County of San Mateo                     ,City Of Santa Maria,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4179,4233,"CA 94005
+(37.69426, -122.39695)"
+41-CR-0014,1,Burlingame Disposal Site,,1001 S Airport Road,Burlingame                              ,County of San Mateo                     ,City Of Burlingame,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4211,4266,"CA 94010
+(37.5911, -122.3588)"
+41-AA-0009,1,Burlingame Refuse Disposal Area,City Of Burlingame,Airport Blvd Near Broadway,Burlingame                              ,County of San Mateo                     ,City Of Burlingame,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4167,4221,"CA 94010
+(37.59043, -122.35454)"
+41-AA-0002,2,Corinda Los Trancos Landfill ( Ox Mtn),"Browning Ferris Industries of CA, Inc.",2 Mi N-E Half Moon Bay Off Hwy 92,Half Moon Bay                           ,County of San Mateo                     ,"Browning Ferris Industries of CA, Inc.",Composting                         ,Chipping and Grinding Activity Fac./ Op.,Permitted                          ,Active                             ,4161,10736,"CA 94019
+(37.50057, -122.41078)"
+41-AA-0002,1,Corinda Los Trancos Landfill ( Ox Mtn),"Browning Ferris Industries of CA, Inc.",2 Mi N-E Half Moon Bay Off Hwy 92,Half Moon Bay                           ,County of San Mateo                     ,"Browning Ferris Industries of CA, Inc.",Disposal                           ,Solid Waste Landfill,Permitted                          ,Active                             ,4161,4214,"CA 94019
+(37.50057, -122.41078)"
+41-AA-0188,1,Davey Tree Company,Davey Tree Tree Company,131 Industrial Way,Brisbane                                ,County of San Mateo                     ,Universal Paragon Corporation,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Active                             ,10789,11218,"CA 94005
+(37.70077, -122.4079)"
+41-CR-0010,1,Dolger,,Skyline Drive,Daly City                               ,County of San Mateo                     ,City Of Daly City                       ,Disposal                           ,Solid Waste Disposal Site          ,Pre-regulations                    ,Closed,4207,4262,"CA 94015
+(37.668, -122.4951)"
+41-AA-0195,1,Double O Site Services,Double O Site Services,114 South Maple,South San Francisco                     ,County of San Mateo                     ,Richard Haskins,Transfer/Processing                ,Small Vol CDI Debris Proc. Operation,Notification                       ,Closed,11258,11825,"CA 94080
+(37.6494, -122.4157)"
+41-AA-0190,1,Ferma-SRDC Recycling Operation I,Ferma-SRDC,475 Seaport Boulevard,Redwood City                            ,County of San Mateo                     ,Port of Redwood City,Transfer/Processing                ,Medium Vol CDI Debris Proc. Fac.,Permitted                          ,Closed,10906,11374,"CA 94063
+(37.50453, -122.2105)"
+41-AA-0191,1,Ferma-SRDC Recycling Operation II,Ferma-SRDC,475 Seaport Boulevard,Redwood City                            ,County of San Mateo                     ,Port of Redwood City,Transfer/Processing                ,Medium Vol CD Wood Debris ChipGrind Fac.,Permitted                          ,Closed,10907,11375,"CA 94063
+(37.50452, -122.2107)"
+41-AA-0020,1,Frontierland Park Landfill,,End Of Yosemite Ave.,Pacifica                                ,County of San Mateo                     ,City Of Pacifica                        ,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4178,4232,"CA 94044
+(37.58582, -122.46682)"
+41-AA-0165,1,Half Moon Bay Landfill,,W. End-Poplar & Metzger Hmb.,Half Moon Bay                           ,County of San Mateo                     ,County Of San Mateo -Dept Parks & Recs  ,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4181,4235,"CA 94019
+(37.45354, -122.43873)"
+41-AA-0008,2,Hillside Class III Disposal Site,"Cypress-Amloc Land Company, Inc.",#1 Sandfill Road  (1500 Hillside Blvd),Colma                                   ,County of San Mateo                     ,"Cypress-Amloc Land Company, Inc.",Composting                         ,Chipping and Grinding Activity Fac./ Op.,Permitted                          ,Closed,4166,10735,"CA 94014
+(37.683, -122.444)"
+41-AA-0008,1,Hillside Class III Disposal Site,"Cypress-Amloc Land Company, Inc.",#1 Sandfill Road  (1500 Hillside Blvd),Colma                                   ,County of San Mateo                     ,"Cypress-Amloc Land Company, Inc.",Disposal                           ,Solid Waste Landfill,Permitted                          ,Closed,4166,4220,"CA 94014
+(37.683, -122.444)"
+41-AA-0007,1,Junipero Serra Solid Waste Disposal Site,,Junipero Serra Blvd Near Southgate Ave,Colma                                   ,County of San Mateo                     ,Bocci/Schneider Interests               ,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4165,4219,"CA 99999
+(37.6766, -122.4684)"
+41-AA-0011,1,Marsh Road Sanitary Landfill,,North End Of Marsh Road @ Bayfront Expwy,Menlo Park                              ,County of San Mateo                     ,City Of Menlo Park Public Works Dept    ,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4169,4223,"CA 94025
+(37.4929, -122.1759)"
+41-AA-0012,1,"Marsh Road Sanitary Landfill, South",,Northerly Terminal Of Marsh Road,Menlo Park                              ,County of San Mateo                     ,City Of Menlo Park Public Works Dept    ,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4170,4224,"CA 94025
+(37.4896, -122.1759)"
+41-AA-0181,1,Mr. Haul,Mr. Haul                                ,867 Second Avenue,Redwood City                            ,County of San Mateo                     ,"Gerritsen, Georgia                      ",Transfer/Processing                ,Limited Volume Transfer Operation,Notification                       ,Active                             ,4193,4247,"CA 94063
+(37.48196, -122.20109)"
+41-AA-0001,1,Mussel Rock Disposal Site,,Coast Highway #1 At Skyline Drive,Daly City                               ,County of San Mateo                     ,City Of Daly City                       ,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4160,4213,"CA 99999
+(37.668, -122.4952)"
+41-AA-0015,1,Mussel Rock Transfer Station,"Allied Waste Industries, Inc.",1680 Edgeworth Avenue,Daly City                               ,County of San Mateo                     ,City Of Daly City                       ,Transfer/Processing                ,Large Volume Transfer/Proc Facility,Permitted                          ,Active                             ,4173,4227,"CA 94015
+(37.68657, -122.47471)"
+41-CR-0008,1,Pescadero (Old),County Of San Mateo Public Works        ,"Pescadero Creek Rd., 3/10 Mi Reservoir R",Pescadero                               ,County of San Mateo                     ,County Of San Mateo Public Works        ,Disposal                           ,Solid Waste Disposal Site          ,To Be Determined                   ,Closed,4205,4260,"CA 94060
+(37.2465, -122.3984)"
+41-AA-0013,1,Pescadero Solid Waste Disposal,,Bean Hollow And Artichoke Road,Pescadero                               ,County of San Mateo                     ,County Of San Mateo Public Works        ,Disposal                           ,Solid Waste Disposal Site          ,Permitted                          ,Closed,4171,4225,"CA 94060
+(37.2396, -122.403)"
+41-AA-0018,1,Pescadero Transfer Station,"Browning-Ferris Industries, San Carlos  ",Bean Hollow Road,Pescadero                               ,County of San Mateo                     ,County Of San Mateo Public Works        ,Transfer/Processing                ,Limited Volume Transfer Operation,Notification                       ,Active                             ,4176,4230,"CA 94060
+(37.24065, -122.40141)"
+41-AA-0194,1,PG&E Martin Service Center,Asplundh Company,731 Schwerin Street,Brisbane                                ,County of San Mateo                     ,Pacific Gas and Electric Company,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Closed,11071,11598,"CA 94014
+(37.70249, -122.40853)"
+41-AA-0196,1,Redwood Debris Box Green Waste Operation,Redwood Building Materials,1 Beeger Rd.,Redwood City                            ,County of San Mateo                     ,Port of Redwood City,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Active                             ,11325,11919,"CA 94061
+(37.50529, -122.21048)"
+41-AA-0169,1,Redwood Shores Landfill,,"NW of Marine Pkwy,SE of Belmont Stream",Redwood City                            ,County of San Mateo                     ,Peery/Arrillaga                         ,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4183,4237,"CA 94065
+(37.53797, -122.25839)"
+41-AA-0014,1,San Bruno Transfer Station,"San Bruno Garbage Company, Inc          ",1271 Montgomery Avenue,San Bruno                               ,County of San Mateo                     ,"San Bruno Garbage Company, Inc          ",Transfer/Processing                ,Large Volume Transfer/Proc Facility,Permitted                          ,Active                             ,4172,4226,"CA 94066
+(37.64053, -122.41272)"
+41-CR-0013,1,San Mateo County Memorial Park,County Of San Mateo -Dept Parks & Recs  ,"9500 Pescadero Creek Rd., Loma Mar, Ca 9",San Mateo                               ,County of San Mateo                     ,County Of San Mateo -Dept Parks & Recs  ,Disposal                           ,Solid Waste Disposal Site          ,To Be Determined                   ,Closed,4210,4265,"CA 94060
+(37.2737, -122.3072)"
+41-AA-0016,1,Shoreway Environmental Center,"Allied Waste Industries, Inc.",225 Shoreway Road,San Carlos                              ,County of San Mateo                     ,South Bayside System Authority          ,Transfer/Processing                ,Large Volume Transfer/Proc Facility,Permitted                          ,Active                             ,4174,4228,"CA 94070
+(37.51788, -122.25849)"
+41-AA-0003,1,Sierra Point Disposal Site,,Bayshore Fwy On Ssf/Brisbane City Line,Brisbane                                ,County of San Mateo                     ,"Lazzarini, Dave                         ",Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4162,4215,"CA 94005
+(37.6735, -122.3872)"
+41-AA-0065,1,So. San Francisco Municipal Dump/Oyster,,95 Harbor Mstr Rd #1 End Of Oyster Pt Bl,South San Francisco                     ,County of San Mateo                     ,City Of South San Francisco             ,Disposal                           ,Solid Waste Disposal Site          ,Unpermitted                        ,Closed,4180,4234,"CA 94080
+(37.66165, -122.38502)"
+41-AA-0176,1,Tillo Products Co Composting Facility,Tillo Products Co                       ,175 N. Access Rd.,South San Francisco                     ,County of San Mateo                     ,So. S.F./San Bruno Water Quality Plant  ,Composting                         ,Composting Facility (Sludge),Permitted                          ,Closed,4189,4243,"CA 94080
+(37.64017, -122.39826)"
+41-AA-0187,1,"Timberline Tree Service, Inc.","Timberline Tree Service, Inc.",3615 Haven Avenue,Menlo Park                              ,County of San Mateo                     ,"Three Sisters Ranch Enterprises, LLC",Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Closed,10788,11217,"CA 94025
+(37.48735, -122.18466)"
+41-AA-0189,1,Valley Crest: Landscape Maintenance,Valley Crest: Landscape Maintenance,70 ChemicalWay,Redwood City                            ,County of San Mateo                     ,Kona Ventures LLC,Composting                         ,Chipping and Grinding Activity Fac./ Op.,Notification                       ,Closed,10831,11282,"CA 94063
+(37.49252, -122.2192)"
