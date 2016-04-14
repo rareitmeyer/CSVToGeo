@@ -45,11 +45,6 @@ There's a sample data set and key file in the 'examples' directory.
 See the help (python3 CSVToGeo.py --help) for a few more invation options.
 
 
-# Tests
-
-There are some unit tests and functional tests in the files marked test_*.py
-
-
 # The Key File
 
 As above, there are a number of settings required to properly convert
@@ -174,10 +169,41 @@ in the file, and provide the data type.
 
 An example of a column section:
 
-  csv_header        SWIS Code   Unit Number   Max Tons   Place
-  identifier                    unit_num      operator   city      dlat   dlon
-  datatype                      integer       real       string    real   real
-  shortname:English             Unit Number   Operator   City      Lat    Long
+  csv_header        XYZ Code   Unit Number   Max Tons     Place
+  identifier                   unit_num      max_weight   city      dlat   dlon
+  datatype                     integer       real         string    real   real
+  shortname:English            Unit Number   Max Weight   City      Lat    Long
 
-Here the SWIS Code column is ignored, and the latitude and longitude values
+Here the XYZ Code column is ignored, and the latitude and longitude values
 will appear in the properties for each feature.
+
+
+# Potential Problems
+
+## CSV vs "CSV for Excel" on the Open San Mateo Data Portal
+
+The Open San Mateo data portal has a lot of data files that are good
+candidates for converting. But always grab those files as "CSV" and
+never as "CSV for Excel."
+
+### Why
+
+If you ask for the data as a "CSV for Excel" file, you'll end up with
+a "byte order mark" as the first 16 bits of the first column
+heading. That will cause errors in processing, with messages like
+this:
+
+"Expected header column 'Name' not present in data file."
+
+In this example, the column in the file isn't actually "Name", it's
+"<bom>Name" where <bom> is the byte-order-mark. Since some spreadsheet
+applications strip off the <bom>, this can be pretty confusing. If you
+see a message like this, check the data file in a text editor.
+
+
+# Tests
+
+There are some unit tests and functional tests in the files marked 
+test_*.py.
+
+

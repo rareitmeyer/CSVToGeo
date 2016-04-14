@@ -1,5 +1,4 @@
-
-# Reads a CSV "key" file, which must be in UTF-8 format.
+# Reads a CSV "key" file, which must should be in UTF-8 format.
 #
 # The key file has two sections: a header with values that apply to the whole
 # data set, and a per-column section that describes the columns in the data.
@@ -10,7 +9,9 @@
 # 
 #
 # source
-#  The source of the data, as a http://URL.
+#  The source of the data, as a http://URL. Used for documentation,
+#  and potentially (in a future version), data could be fetched from
+#  this URL.
 #  
 # epsg_code [required]
 #   The EPSG code for the geographic projection the data uses. Data often
@@ -65,13 +66,13 @@
 #
 # csv_header
 #   The row (column B...) contains the column headers for the CSV
-#   file, and must match those column names exactly.  This must be the
-#   first row of the per-column section, which makes reading the file
-#   easier.
+#   file, and must match those column names exactly.  This should be
+#   the first row of the per-column section, which makes reading the
+#   file easier.
 #
 # identifier
 #   The row contains the identifier to use in the GeoJSON or ESRI
-#   shapefile.  It must be the second row of the per-column section.
+#   shapefile.  It should be the second row of the per-column section.
 #   Identifiers must start with a letter, and contain only
 #   letters, numbers or underscores --- no spaces or punctuation!
 #   Additionally, identifiers must be 1-10 characters long, as ESRI
@@ -89,16 +90,26 @@
 #
 # Columns in the data that are not listed in the file are ignored.
 # 
+# Identifiers 'dlat' and 'dlon' are reserved for the latitude and longitude,
+# and should not be used for anything else. To include dlat and dlon as
+# properties, rather than just geometry, add them to the list of columns
+# (perhaps without a column heading, if they come from a regular expression
+# parsed from dllcol).
+#
+# If a dllre regular expression has additional named captures, those
+# could also be included in the output. List the capture as an identifier
+# in the file, and provide the data type.
 #
 #
 # An example of a column section:
-#
-#   csv_header        SWIS Code   Unit Number   Max Tons   Place
-#   identifier                    unit_num      operator   city      
-#   datatype                      integer       real       string    
-#   shortname:English             Unit Number   Operator   City      
-#
-# Here the SWIS Code column is ignored.
+# 
+#   csv_header        XYZ Code   Unit Number   Max Tons     Place
+#   identifier                   unit_num      max_weight   city      dlat   dlon
+#   datatype                     integer       real         string    real   real
+#   shortname:English            Unit Number   Max Weight   City      Lat    Long
+# 
+# Here the XYZ Code column is ignored, and the latitude and longitude values
+# will appear in the properties for each feature.
 
 
 

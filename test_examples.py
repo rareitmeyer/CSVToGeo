@@ -5,11 +5,11 @@ import hashlib
 
 import osgeo.ogr
 
-import CSVToGeoJSON
+import CSVToGeo
 
 
-EXAMPLES_DIR = os.path.join(os.path.dirname(CSVToGeoJSON.__file__), "examples")
-TEST_DIR = os.path.join(os.path.dirname(CSVToGeoJSON.__file__), "tests")
+EXAMPLES_DIR = os.path.join(os.path.dirname(CSVToGeo.__file__), "examples")
+TEST_DIR = os.path.join(os.path.dirname(CSVToGeo.__file__), "tests")
 
 def copy_helper(filename):
     """Copy a file from the examples directory to the test
@@ -143,7 +143,7 @@ class TestSolidWasteGeoJSON(unittest.TestCase):
     def test(self):
         keyfile = os.path.join(TEST_DIR, self.keyfile)
         datafile = os.path.join(TEST_DIR, self.datafile)
-        CSVToGeoJSON.main(['--keyfile', keyfile, '--datafile', datafile])
+        CSVToGeo.main(['--keyfile', keyfile, '--datafile', datafile])
 
         # compare_layer_defs_helper(self, self.dsfile)
         check_features_helper(self, self.dsfile)
