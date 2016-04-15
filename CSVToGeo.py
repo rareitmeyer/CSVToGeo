@@ -171,6 +171,7 @@ def check_cols(args, kf):
         reader = csv.reader(fp)
         header = next(reader)
 
+        logging.info("datafile header is {hdr}".format(hdr=repr(header)))
         # Confirm header has the expected columns
         for h in kf.hdr_to_id:
             if h not in header:
@@ -196,7 +197,7 @@ def check_cols(args, kf):
             for sc in str_col_widths:
                  str_col_widths[sc] = max(str_col_widths[sc], len(record.get(sc, '')))
 
-    logging.info("Have {rows} rows, {skipped} of which are skipped".format(rows=row_count, skipped=skipped_count))
+    logging.info("Have {rows} rows, {skipped} of which were skipped.".format(rows=row_count, skipped=skipped_count))
     for m in skipped_msgs:
         logging.info("  "+m)
 
