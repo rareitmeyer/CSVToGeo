@@ -19,7 +19,8 @@ The key file is also in CSV format.
 * A recent copy of Python3. The author has tested under Python 3.4, but
   back as far as Python 3.2 will probably work.
 
-* The "osgeo" python package.
+* The "gdal" python package from pypi.python.org. (Note, this shows up
+  in python as "osgeo.")
 
 * The "requests" package may be a requirement in the future.
 
