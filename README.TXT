@@ -27,16 +27,17 @@ The key file is also in CSV format.
 
 # Example
 
-There's a sample data set and key file in the 'examples' directory.
+There are some sample data sets and key files in the 'examples' directory.
 
-1. Make a new directory called "test" and copy the example files to test.
+1. Make a new directory called "test" next to the example directory.
 
-2. Copy the example .csv data file and .key.csv key file to the test directory
+2. Copy the example .csv data files and .key.csv key files to the test
+   directory
 
 3. Open a command prompt and change to the test directory
 
-4. Use python 3.2 or later, which could be called python3 or just python,
-   depending on your platform, to run the tool as follows:
+4. Use python 3.2 or later, which could be called python3 or just
+   python, depending on your platform, to run the tool as follows:
 
    python3 ../CSVToGeo.py --keyfile Solid_Waste_Centers.key.csv --datafile --Solid_Waste_Centers.csv --outext .geojson
 
@@ -85,7 +86,7 @@ dloncol
   The name of the column containing degrees of longitude as a floating-point
   number, positive for East, negative for South. If there's a column named
   "longitude" with values like -122.313313, the value for dloncol would be
-  latitude.
+  longitude.
 
 dllcol
   The name of a column containing both degrees of latitude and longitude as
@@ -151,8 +152,8 @@ shortname:<language>
   This row contains a short name for the column in language <language>.
 
 description:<language>
-  This row contains a short description name for the column in 
-  language <language>.
+  This row contains a short description for the column in language
+  <language>.
 
 
 Columns in the data that are not listed in the file are ignored.
@@ -190,7 +191,7 @@ never as "CSV for Excel."
 ### Why
 
 If you ask for the data as a "CSV for Excel" file, you'll end up with
-a "byte order mark" as the first 16 bits of the first column
+a "byte order mark" as the first two bytes of the first column
 heading. That will cause errors in processing, with messages like
 this:
 
@@ -199,7 +200,8 @@ this:
 In this example, the column in the file isn't actually "Name", it's
 "<bom>Name" where <bom> is the byte-order-mark. Since some spreadsheet
 applications strip off the <bom>, this can be pretty confusing. If you
-see a message like this, check the data file in a text editor.
+see a message like this, look at the log file or check the data file 
+in a text editor.
 
 
 # Tests
