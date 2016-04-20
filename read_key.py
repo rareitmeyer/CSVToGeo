@@ -135,6 +135,10 @@ import copy
 import osgeo.osr
 
 
+EXPECTED_KEYS = ['source', 'epsg_code', 'dlatcol',
+                 'dloncol', 'dllcol', 'dllre',
+                 'encoding', 'maxskippct']
+
 class KeyFile(object):
     def __init__(self):
         self.filename = None
@@ -154,19 +158,22 @@ class KeyFile(object):
 
 
     def _read_globals(self, reader):
-        expected_keys = 'source epsg_code dlatcol dloncol dllcol dllre encoding maxskippct'.split()
+
         retval = {}
-        for row in reader:
+        for raw_row in reader:
             # strip any spaces
-            for j in range(len(row)):
-                row[j] = row[j].strip()
+            row = [x.strip() for x in raw_row]
             if len(row) < 1 or row[0] == '':
                 break
 
             # confirm the row has an expected key...
-            if row[0] not in expected_keys:
-                msg = "row {r} has an invalid key, '{k}'. Please use one of {ek}".format(
-                    r=reader.line_num, k=row[0], ek=repr(expected_keys))
+            if row[0] not in EXPECTED_KEYS:
+                msg = ("row {r} has an invalid key, '{k}'. "
+                       "Please use one of {ek}").format(
+                           r=reader.line_num,
+                           k=row[0],
+                           ek=repr(EXPECTED_KEYS)
+                       )
                 raise ValueError(msg)
 
             # If row[1] is blank, skip
@@ -261,14 +268,10 @@ class KeyFile(object):
         colgrid = []
         name_line = {}
         blanks = 0
-        for recno, row in enumerate(reader):
+        for recno, raw_row in enumerate(reader):
             # strip any spaces and ignore any all-blank rows.
-            allblank = True
-            for j in range(len(row)):
-                row[j] = row[j].strip()
-                if row[j] != '':
-                    allblank = False            
-            if allblank:
+            row = [x.strip() for x in raw_row]
+            if not any([x != '' for x in row]):
                 blanks += 1
                 continue
                 
@@ -281,8 +284,8 @@ class KeyFile(object):
                 blank_col = (recno-blanks)*['']
                 colgrid.append(blank_col)
             
-            for j in range(len(row)):
-                colgrid[j].append(row[j])
+            for r in row:
+                colgrid[j].append(r)
             for j in range(len(row),len(colgrid)):
                 colgrid[j].append('')
                 
@@ -319,23 +322,28 @@ class KeyFile(object):
                 ids[id] = {}
 
         # OK, now fill in the ids.
-        for j in range(1,len(colgrid)):
+        for j in range(1, len(colgrid)):
             id = colgrid[j][identifier_grididx]
             if id != '':
-                for i in range(len(colgrid[j])):
-                    ids[id][colgrid[0][i]] = colgrid[j][i]
+                for index, value in enumerate(colgrid[j]):
+                    ids[id][colgrid[0][index]] = value
                     
         # check each ID
         for id in ids:
-            if id != '':
-                if ids[id]['datatype'] == '':
-                    msg = "Data type for identifier {id} cannot be blank".format(
-                        id=id)
-                    raise ValueError(msg)
-                if ids[id]['datatype'] not in ['string', 'real', 'integer']:
-                    msg = "Data type for identifier {id} is '{val}' but must be one of string, real or integer".format(
-                        id=id, val=ids[id]['datatype'])
-                    raise ValueError(msg)
+            if id == '':
+                # Ignore this and keep on going
+                continue
+            if ids[id]['datatype'] == '':
+                msg = "Data type for identifier {id} cannot be blank".format(
+                    id=id)
+                raise ValueError(msg)
+            if ids[id]['datatype'] not in ['string', 'real', 'integer']:
+                msg = (
+                    "Data type for identifier {id} is '{val}' "
+                    "but must be one of string, real or integer").format(
+                        id=id, val=ids[id]['datatype']
+                    )
+                raise ValueError(msg)
 
         return (hdr_to_id, ids)
 
