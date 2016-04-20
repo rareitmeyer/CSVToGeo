@@ -163,7 +163,8 @@ class KeyFile(object):
         for raw_row in reader:
             # strip any spaces
             row = [x.strip() for x in raw_row]
-            if len(row) < 1 or row[0] == '':
+            if len(row) < 2 or row[0] == '' or row[1] == '':
+                # Skip if row[0] is blank OR if row[1] is blank
                 break
 
             # confirm the row has an expected key...
@@ -175,10 +176,6 @@ class KeyFile(object):
                            ek=repr(EXPECTED_KEYS)
                        )
                 raise ValueError(msg)
-
-            # If row[1] is blank, skip
-            if len(row) < 2 or row[1] == '':
-                continue
 
             # clean or sanity check values as they are read, to provide 
             # row number context.
@@ -242,6 +239,15 @@ class KeyFile(object):
             retval['encoding'] = 'utf-8'
         if 'maxskippct' not in retval:
             retval['maxskippct'] = 0.0
+        self._validate_retval(retval=retval)        
+            
+        return retval
+
+    def _validate_retval(self, retval):
+        """
+        Moved out of read_globals in order to simplify that code
+        """
+        
         if 'epsg_code' not in retval:
             msg = "Required epsg_code is missing"
             raise ValueError(msg)
@@ -257,9 +263,6 @@ class KeyFile(object):
         if 'dllcol' in retval and 'dlatcol' in retval:
             msg = "Only one of (dlatcol,dloncol) or (dllcol,dllre) may be specified"
             raise ValueError(msg)
-            
-        return retval
-
 
     def _read_cols(self, reader):
         hdr_to_id = {}
