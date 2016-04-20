@@ -12,15 +12,11 @@ class ParseDatatype(object):
 
 
     def reset_number_NA(self, number_NA=None):
-        if number_NA is None:
-            number_NA = []
-        self.number_NA = number_NA
+        self.number_NA = number_NA or []
 
 
     def reset_string_NA(self, string_NA=None):
-        if string_NA is None:
-            string_NA = []
-        self.string_NA = string_NA
+        self.string_NA = string_NA or []
 
 
     def integer(self, val):
@@ -55,5 +51,7 @@ class ParseDatatype(object):
         elif typename == 'integer':
             return self.int(val)
         else:
-            raise ValueError("Unknown type {typename}".format(typename=typename))
+            raise ValueError("Unknown type {typename}".format(
+                typename=typename
+            ))
 
