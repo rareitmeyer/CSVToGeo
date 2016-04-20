@@ -163,8 +163,11 @@ class KeyFile(object):
         for raw_row in reader:
             # strip any spaces
             row = [x.strip() for x in raw_row]
-            if len(row) < 2 or row[0] == '' or row[1] == '':
-                # Skip if row[0] is blank OR if row[1] is blank
+            if len(row) < 1 or row[0] == '':
+                # Skip if row[0] is blank
+                break
+            if len(row) < 2 or row[1] == '':
+                # Skip if row[1] is blank
                 break
 
             # confirm the row has an expected key...
