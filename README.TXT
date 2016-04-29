@@ -25,6 +25,42 @@ The key file is also in CSV format.
 * The "requests" package may be a requirement in the future.
 
 
+# Installing Prerequisites on Windows
+
+* Download and install Python3.5.1 for windows, from
+  http://www.python.org.  You can install either the 32-bit or 64-bit
+  version of Python if you have a 64-bit version of Windows, but
+  you'll need to remember which you installed. (It's also displayed
+  when you invoke 'python' at the command prompt.) To keep things
+  simple, install python into c:\python35.
+
+* Grab a pre-built GDAL 2.0.x package from Christoph Gohlke's repository at UC Irvine:
+  http://www.lfd.uci.edu/~gohlke/pythonlibs/
+  Packages are different for different versions of GDAL, versions of Python, and different
+  bit-ness of the python build. So for GDAL 2.0.2 on python 3.5.x that is 32-bit, grab
+  GDAL-2.0.2-cp35-none-win32.whl. For  GDAL 2.0.2 on python 3.5.x that is 64-bit, grab
+  GDAL-2.0.2-cp35-none-amd64.whl. You'll need to match the version of Python installed.
+  Save the file somewhere you can find it, like c:\users\<yourname>
+
+* Open a command prompt. (You can hit the start button and type 'cmd' if that's easiest.)
+
+* Change to the directory where the GDAL wheel (.whl) file was saved with the 'cd' command:
+  cd c:\users\<yourname>
+
+* Add python and the python 'scripts' directory to the front of your path:
+  set PATH=c:\python35;\c:\python35\scripts;%path%
+
+* Use the 'pip' command to install the package. For a 32-bit copy of python 3.5, that's:
+  pip install GDAL-2.0.2-cp35-none-win32.whl
+
+* As mentioned on Christoph Gohlke's page, his packages depends on the Microsoft VC
+  redistributable libraries. For Python 3.5, these are available from Microsoft at
+  https://www.visualstudio.com/downloads/download-visual-studio-vs#d-visual-c
+  Note that the libraries come in 32-bit and 64-bit versions, and you'll need to pick
+  the one corresponding to your version of Python (32-bit if your Python is 32-bit,
+  even if you have a 64-bit OS).
+
+
 # Example
 
 There are some sample data sets and key files in the 'examples' directory.
@@ -178,6 +214,29 @@ An example of a column section:
 
 Here the XYZ Code column is ignored, and the latitude and longitude values
 will appear in the properties for each feature.
+
+
+# Invocation
+
+Open a command prompt, then cd to where CSVToGeo.py and your keyfiles / datafiles are.
+(It's easiest if they're all in the same directory).
+
+If you're on windows, make sure python3 is in your path:
+set path=c:\python35;%path%
+(Assuming you installed python 3.5 into c:\python35)
+
+To use the program, run it like this:
+
+   <python> CSVToGeo.py --keyfile <keyfilename>.csv --datafile <datafilename>.csv
+
+Where
+  <python> is the name of your Python 3 interpreter, likely 'python3' on 
+  Linux and 'python.exe' on Windows.
+
+  <keyfilename>.csv is the name of the key file
+
+  <datafilename>.csv is the name of the data file
+
 
 
 # Potential Problems
